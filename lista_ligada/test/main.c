@@ -1,16 +1,10 @@
 #include <check.h>
 #include <stdlib.h>
-#define LINKED_LIST_IMPLEMENTATION
-#include "linkedlist.h"
+#include "linked_list.h"
 
 // Función auxiliar para imprimir enteros (usada en pruebas)
 void print_int(int value) {
     printf("%d ", value);
-}
-
-// Función auxiliar para comparar enteros
-bool int_cmp(int a, int b) {
-    return a == b;
 }
 
 /* ------------------------------------- */
@@ -37,7 +31,6 @@ START_TEST(test_append_and_length) {
     ck_assert_uint_eq(list_int_length(list), 2);
     
     list_int_destroy(list);
-    ck_assert_ptr_null(list);
 }
 END_TEST
 
